@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js" integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" crossorigin="anonymous"></script>
+
+  <title>Document</title>
+</head>
+<body>
+    <!--nav bar sample-->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#cemex-overview">Cemex</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="#home">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">cemex TOS</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                kpis
+              </a>
+              <ol class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <li><a class="dropdown-item" href="#" data-kpi-id="1">kpi 1<span class="badge bg-secondary">2</span></a></li>
+                <li><a class="dropdown-item" href="#" data-kpi-id="2">kpi 2<span class="badge bg-secondary">4</span></a></li>
+                <li><hr class="dropdown-divider"></li>
+                <li><a class="dropdown-item" href="#">Some where else</a></li>
+              </ol>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
+            </li>
+          </ul>
+          <form class="d-flex">
+            <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+            <button class="btn btn-outline-success" type="submit">Search</button>
+          </form>
+        </div>
+      </div>
+    </nav>
+    <!-- container sample https://getbootstrap.com/docs/5.0/layout/containers/-->
+    <div class="container-fluid bg-primary py-5">
+      <div class="container">
+        
+        <h1 class="display-3">kpi gameplays</h1>
+        <p class="lead"> some games to understand the kpi evaluated </p>
+      </div>
+    </div>
+    <div class="container bg-primary">
+      <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Unde inventore similique eveniet voluptatum, autem eos voluptatem excepturi dolores placeat nam expedita blanditiis, sit omnis fugit quaerat velit eius nisi assumenda.</p>
+    </div>
+    <div class="container-fluid bg-primary">
+      <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Unde inventore similique eveniet voluptatum, autem eos voluptatem excepturi dolores placeat nam expedita blanditiis, sit omnis fugit quaerat velit eius nisi assumenda.</p>
+    </div>
+    <!--grid sample https://getbootstrap.com/docs/5.0/layout/grid/  remember the grid system is for 12 cols-->
+    <h1 class="text-center py-5"> da grid <span class="text-muted">system</span> </h1>
+    <div class="container">
+      <div class="row">
+        <div class="col-4 bg-primary">
+          <p>col-4</p>
+        </div>
+        <div class="col-4 bg-success">
+          <p>col-4</p>
+        </div>
+        <div class="col-4 bg-primary">
+          <p>col-4</p>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-12 bg-primary">
+          <p>col-12</p>
+        </div>
+        <!-- what happen to this cell ?-->
+        <div class="col-1 bg-primary">
+          <p>col-1</p>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-3 bg-success">
+          <p>col-3</p>
+        </div>
+        <div class="col-3 bg-success">
+          <p>col-3</p>
+        </div>
+        <div class="col-3 bg-success">
+          <p>col-3</p>
+        </div>
+        <div class="col-3 bg-success">
+          <p>col-3</p>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-1 bg-primary">
+          <p>col-1</p>
+        </div>
+      </div>
+    </div>
+    <!-- some practice-->
+    <style>
+      @media(min-width: 992px){
+        .alto-100 {
+          height: 100
+        }
+      }
+    </style>
+    <!--vh-100 instead off alto-100-->
+    <main class="container d-flex align-items-center justify-content-center vh-100">
+      <div class="row">
+        <div class="col-12 col-lg-8">
+          <div class="row">
+            <div class="col-12 col-lg-8">
+              <article class="card chems-card bg-secondary">
+                <div class="card-body">
+                  <div class="d-flex row ">
+                    <div class="col-12 col-lg-4">
+                      <img class="border border-secondary border-2 rounded-circle img-fluid" src="https://pbs.twimg.com/profile_images/1262250619278168064/i507bYdM_400x400.jpg" alt="">
+                    </div>
+                    <div class="col-12 col-lg-8 ps-3">
+                      <div class="m-0 h6"> description of the chems meme</div>
+                    </div>
+                  </div>
+                </div>
+              </article>
+            </div>
+            <div class="col-12 col-lg-4 bg-success">
+              <article class="card cat-boss-card">
+                <div class="card-body">
+                  <div class="d-flex row ">
+                    <div class="col-12 col-lg-4">
+                      <img class="border border-secondary border-2 rounded-circle img-fluid" src="https://static.boredpanda.com/blog/wp-content/uploads/2015/09/adventures-of-business-cat-comics-tom-fonder-fb__700.jpg" alt="">
+                    </div>
+                    <div class="col-12 col-lg-8 ps-3">
+                      <div class="m-0 h6"> description of the cat boss meme</div>
+                    </div>
+                  </div>
+                </div>
+              </article>              
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-12 col-lg-6 bg-danger">
+              <article class="card doge-card">
+                <div class="card-body">
+                  <div class="d-flex row ">
+                    <div class="col-12 col-lg-4">
+                      <img class="border border-secondary border-2 rounded-circle img-fluid" src="https://ih1.redbubble.net/image.445130528.1102/flat,750x1000,075,f.u2.jpg" alt="">
+                    </div>
+                    <div class="col-12 col-lg-8 ps-3">
+                      <div class="m-0 h6"> description of the doge meme</div>
+                    </div>
+                  </div>
+                </div>
+              </article>            </div>
+            <div class="col-12 col-lg-6 bg-warning">
+              <article class="card i-have-no-idea-card">
+                <div class="card-body">
+                  <div class="d-flex row ">
+                    <div class="col-12 col-lg-4">
+                      <img class="border border-secondary border-2 rounded-circle img-fluid" src="https://i.kym-cdn.com/entries/icons/original/000/008/342/ihave.jpg" alt="">
+                    </div>
+                    <div class="col-12 col-lg-8 ps-3">
+                      <div class="m-0 h6"> description of the i have-no-idea meme</div>
+                    </div>
+                  </div>
+                </div>
+              </article>             
+            </div>
+          </div>
+        </div>
+        <div class="col-12 col-lg-4 bg-primary">
+          <article class="card business-cat-card">
+            <div class="card-body">
+              <div class="d-flex row ">
+                <div class="col-12 col-lg-4">
+                  <img class="border border-secondary border-2 rounded-circle img-fluid" src="https://i.kym-cdn.com/photos/images/masonry/000/100/094/business-cat-14.jpg?1297799242" alt="">
+                </div>
+                <div class="col-12 col-lg-8 ps-3">
+                  <div class="m-0 h6"> description of the business cat meme</div>
+                </div>
+              </div>
+            </div>
+          </article>   
+        </div>
+      </div>
+    </main>
+    <!--put a form here-->
+    <form class="register">
+      <fieldset>
+        <legend>register</legend>
+        <div class="mb-3">
+          <label for="exampleInputEmail1" class="form-label">Email address</label>
+          <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+          <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+        </div>
+        <div class="mb-3">
+          <label for="disabledTextInput" class="form-label">Disabled input</label>
+          <input type="text" id="disabledTextInput" class="form-control" placeholder="Disabled input remove disabled attribute to use this" disabled>
+        </div>
+        <div class="mb-3">
+          <label for="exampleInputPassword1" class="form-label">Password</label>
+          <input type="password" class="form-control" id="exampleInputPassword1">
+        </div>
+        <div class="color-list mb-3">
+          <label for="">pick fav color</label>
+          <input type="text" list="color-list">
+          <datalist id="color-list">
+            <option selected value="Blue">Blue</option>
+            <option value="Red">Red</option>
+            <option value="Green">Green</option>
+            <option value="Pink">Pink</option>
+          </datalist>
+        </div>
+        <select class="form-select" aria-label="color">
+          <option selected>pls pick a color</option>
+          <option value="watermelon">watermelon</option>
+          <option value="kiwi">kiwi</option>
+          <option value="apple">apple</option>
+          <option value="banana">banana</option>
+        </select>
+        <div class="mb-3 form-check">
+          <input type="checkbox" class="form-check-input" id="acceptTOS">
+          <label class="form-check-label" for="acceptTOS">accept TOS</label>
+        </div>
+        <div class="some-radio-sampe">
+          <div class="form-check">
+            <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+            <label class="form-check-label" for="flexRadioDefault1">
+              Default radio
+            </label>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" checked>
+            <label class="form-check-label" for="flexRadioDefault2">
+              Default checked radio
+            </label>
+          </div>
+        </div>
+        <div class="mb-3 form-check"></div>
+        <button type="submit" class="btn btn-primary">Submit</button>
+      </fieldset>
+    </form>
+    <!-- Button trigger modal -->
+    <div class="modal-sample">
+      <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+        Launch demo modal
+      </button>
+  
+      <!-- Modal -->
+      <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              <form class="register">
+                <fieldset>
+                  <legend>register</legend>
+                  <div class="mb-3">
+                    <label for="exampleInputEmail1" class="form-label">Email address</label>
+                    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                    <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+                  </div>
+                  <div class="mb-3">
+                    <label for="disabledTextInput" class="form-label">Disabled input</label>
+                    <input type="text" id="disabledTextInput" class="form-control" placeholder="Disabled input remove disabled attribute to use this" disabled>
+                  </div>
+                  <div class="mb-3">
+                    <label for="exampleInputPassword1" class="form-label">Password</label>
+                    <input type="password" class="form-control" id="exampleInputPassword1">
+                  </div>
+                  <div class="color-list mb-3">
+                    <label for="">pick fav color</label>
+                    <input type="text" list="color-list">
+                    <datalist id="color-list">
+                      <option selected value="Blue">Blue</option>
+                      <option value="Red">Red</option>
+                      <option value="Green">Green</option>
+                      <option value="Pink">Pink</option>
+                    </datalist>
+                  </div>
+                  <select class="form-select" aria-label="color">
+                    <option selected>pls pick a color</option>
+                    <option value="watermelon">watermelon</option>
+                    <option value="kiwi">kiwi</option>
+                    <option value="apple">apple</option>
+                    <option value="banana">banana</option>
+                  </select>
+                  <div class="mb-3 form-check">
+                    <input type="checkbox" class="form-check-input" id="acceptTOS">
+                    <label class="form-check-label" for="acceptTOS">accept TOS</label>
+                  </div>
+                  <div class="some-radio-sampe">
+                    <div class="form-check">
+                      <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+                      <label class="form-check-label" for="flexRadioDefault1">
+                        Default radio
+                      </label>
+                    </div>
+                    <div class="form-check">
+                      <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" checked>
+                      <label class="form-check-label" for="flexRadioDefault2">
+                        Default checked radio
+                      </label>
+                    </div>
+                  </div>
+                  <div class="mb-3 form-check"></div>
+                </fieldset>
+              </form>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+              <button type="submit" class="btn btn-primary">Submit</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <footer class="footer_site">
+      all the copy rights and more stuff
+    </footer>
+</body>
+</html>

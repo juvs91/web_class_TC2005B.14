@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html id="tema" class="claro">
+	<head>
+		<title>Our Site</title>
+		<meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0, shrink-to-fit=no' name='viewport' />
+		<link rel="stylesheet" href="css/styles.css" />
+	</head>
+	<body>
+		<div>
+			<style>
+				nav div {
+						background-color:yellow;
+				}
+			</style>
+		</div>
+		<nav>
+			<div class="logo"><img src="img/logo.png"></div>
+			<a href="#"><div class="elemento">Home</div></a>
+			<a href="#"><div class="elemento" style="background-color:gray">About Us</div></a>
+			<a href="#"><div class="elemento">Services</div></a>
+			<a href="#"><div class="elemento">Contact</div></a>
+		</nav>
+		<div>
+			<style>
+				nav div {
+						background-color:red;
+				}
+			</style>
+		</div>
+		<div class="selector">
+			<a class="ligaclaro" onclick="myFunctionClaro()">Claro</a> | <a class="ligaoscuro" onclick="myFunctionOscuro()">Oscuro</a>
+		</div>
+		<div class="cuerpo">
+			<div>
+				<h2>Column 1</h2>
+				<img src="img/imagen1.jpg" style="width:100%;">
+				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In porttitor bibendum velit in sagittis. Aliquam ut eleifend risus. Aenean scelerisque lorem at erat tempus, sed vehicula nunc hendrerit. Pellentesque ornare interdum fermentum. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Quisque consectetur ex elit, non vehicula tellus venenatis sed. Ut et fermentum quam. Cras ut dolor vulputate, efficitur lectus eget, iaculis ligula. Etiam urna felis, dictum eget risus nec, malesuada condimentum neque. Sed porttitor, diam non maximus lacinia, erat ligula varius lorem, ac fermentum ipsum nisl ut mi. Integer ac maximus odio, sit amet congue mi. Cras nec dolor eget quam dignissim ullamcorper sed eget eros. Nullam tincidunt finibus lectus quis auctor. Sed aliquet bibendum felis, non hendrerit mauris mattis pretium. Vivamus vehicula aliquet metus id congue. Integer consectetur commodo mi, vel luctus magna luctus nec. Fusce scelerisque ac enim eu hendrerit. Aenean tempor lectus ipsum, nec pharetra nisl semper in. Pellentesque sed lectus a sem porta mollis quis eget dui. Suspendisse potenti. Aliquam viverra, urna at tincidunt dictum, mi lacus varius diam, a pulvinar ipsum dolor eget nulla. Morbi mattis, leo vel maximus semper, nisi diam efficitur odio, nec elementum dolor nibh ut leo. Donec porta luctus fermentum. Nullam laoreet dignissim ante, a maximus nisl.</p>
+			</div>
+			<div>
+				<h2>Column 2</h2>
+				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In porttitor bibendum velit in sagittis. Aliquam ut eleifend risus. Aenean scelerisque lorem at erat tempus, sed vehicula nunc hendrerit. Pellentesque ornare interdum fermentum. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Quisque consectetur ex elit, non vehicula tellus venenatis sed. Ut et fermentum quam. Cras ut dolor vulputate, efficitur lectus eget, iaculis ligula. Etiam urna felis, dictum eget risus nec, malesuada condimentum neque. Sed porttitor, diam non maximus lacinia, erat ligula varius lorem, ac fermentum ipsum nisl ut mi. Integer ac maximus odio, sit amet congue mi. Cras nec dolor eget quam dignissim ullamcorper sed eget eros. Nullam tincidunt finibus lectus quis auctor. Sed aliquet bibendum felis, non hendrerit mauris mattis pretium. Vivamus vehicula aliquet metus id congue. Integer consectetur commodo mi, vel luctus magna luctus nec. Fusce scelerisque ac enim eu hendrerit. Aenean tempor lectus ipsum, nec pharetra nisl semper in. Pellentesque sed lectus a sem porta mollis quis eget dui. Suspendisse potenti. Aliquam viverra, urna at tincidunt dictum, mi lacus varius diam, a pulvinar ipsum dolor eget nulla. Morbi mattis, leo vel maximus semper, nisi diam efficitur odio, nec elementum dolor nibh ut leo. Donec porta luctus fermentum. Nullam laoreet dignissim ante, a maximus nisl.</p>
+
+			</div>
+			<div>
+				<h2>Column 3</h2>
+				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In porttitor bibendum velit in sagittis. Aliquam ut eleifend risus. Aenean scelerisque lorem at erat tempus, sed vehicula nunc hendrerit. Pellentesque ornare interdum fermentum. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Quisque consectetur ex elit, non vehicula tellus venenatis sed. Ut et fermentum quam. Cras ut dolor vulputate, efficitur lectus eget, iaculis ligula. Etiam urna felis, dictum eget risus nec, malesuada condimentum neque. Sed porttitor, diam non maximus lacinia, erat ligula varius lorem, ac fermentum ipsum nisl ut mi. Integer ac maximus odio, sit amet congue mi. Cras nec dolor eget quam dignissim ullamcorper sed eget eros. Nullam tincidunt finibus lectus quis auctor. Sed aliquet bibendum felis, non hendrerit mauris mattis pretium. Vivamus vehicula aliquet metus id congue. Integer consectetur commodo mi, vel luctus magna luctus nec. Fusce scelerisque ac enim eu hendrerit. Aenean tempor lectus ipsum, nec pharetra nisl semper in. Pellentesque sed lectus a sem porta mollis quis eget dui. Suspendisse potenti. Aliquam viverra, urna at tincidunt dictum, mi lacus varius diam, a pulvinar ipsum dolor eget nulla. Morbi mattis, leo vel maximus semper, nisi diam efficitur odio, nec elementum dolor nibh ut leo. Donec porta luctus fermentum. Nullam laoreet dignissim ante, a maximus nisl.</p>
+
+			</div>
+		</div>
+		<div class="footer">
+			Copyright 2020 All Rights Reserved
+		</div>
+		<script type="text/javascript">
+			function myFunctionOscuro() {
+				var element = document.getElementById("tema");
+				element.classList.remove("claro");
+				element.classList.add("oscuro");
+			}
+			function myFunctionClaro() {
+				var element = document.getElementById("tema");
+				element.classList.remove("oscuro");
+				element.classList.add("claro");
+			}
+		</script>
+	</body>
+</html>

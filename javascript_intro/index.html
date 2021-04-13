@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script src="./sample_one.js"></script>
+  <script>
+    console.log("in the script from the head")
+    document.addEventListener("DOMContentLoaded", (_event) => {
+      document.querySelector("p#my-p-id").innerHTML = "hola mundo"
+      let click_function = (_event) => {
+        console.log("btn clicked")
+      }
+      document.querySelector("#my-btn").addEventListener("click", click_function)
+    })
+
+    // dom still not parsed
+    // document.querySelector("p#my-p-id").innerHTML = "hola mundo"
+  </script>
+</head>
+<body>
+  <script>
+    console.log("in the script from the body")
+  </script>
+  <p class="my-p">hola</p>
+  <p class="my-p">hola 1</p>
+  <p class="my-p">hola 2</p>
+  <p id="my-p-id">hola id</p>
+  <button id="my-btn"> holaa</button>
+</body>
+</html>
