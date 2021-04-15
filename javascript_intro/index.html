@@ -5,17 +5,39 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
+  <style>
+      div.bubble-sample * {
+        margin: 10px;
+        border: 1px solid blue;
+      }
+      div.box {
+        background-color: blue;
+        width: 60%;
+        height: 30%;
+        border-color: green;
+        border: 15px solid;
+        padding: 50px;
+        margin: 20px;
+      }
+  </style>
   <script src="./sample_one.js"></script>
   <script>
     console.log("in the script from the head")
     document.addEventListener("DOMContentLoaded", (_event) => {
       document.querySelector("p#my-p-id").innerHTML = "hola mundo"
-      let click_function = (_event) => {
-        console.log("btn clicked")
+      let click_function = (event) => {
+        console.log("clicked")
+        console.log(event.stopPropagation())
+        console.log(event.target)
+        console.log(event.currentTarget)
       }
       document.querySelector("#my-btn").addEventListener("click", click_function)
+      document.querySelector("input.key-event").addEventListener("keyup", click_function)
+      document.querySelector("div.grand-pa").addEventListener("click", click_function)
+      document.querySelector("div.parent").addEventListener("click", click_function)
+      document.querySelector("div.child").addEventListener("click", click_function)
     })
-
+    
     // dom still not parsed
     // document.querySelector("p#my-p-id").innerHTML = "hola mundo"
   </script>
@@ -24,10 +46,27 @@
   <script>
     console.log("in the script from the body")
   </script>
+  <div class="grand-pa bubble-sample" > grand pa
+    <div class="parent bubble-sample"> parent
+      <div class="child bubble-sample"> child</div>
+    </div>
+  </div>
+  <div class="child bubble-sample">child out from fam</div>
   <p class="my-p">hola</p>
   <p class="my-p">hola 1</p>
   <p class="my-p">hola 2</p>
   <p id="my-p-id">hola id</p>
   <button id="my-btn"> holaa</button>
+  pl write something<input type="text" class="key-event">
+  <!--for next monday-->
+  <template id="item-mock">
+    <li><span class="item-name">dona</span><span class="item-price">8</span></li> <button class="delete"> delete</button>
+  </template>
+  <ul class="item-list">
+  </ul>
+  item name: <input type="text" class="new-item-name">
+  item price: <input type="text" class="new-item-price">
+  <button class="add-item">add item</button>
+  <div class="total"></div>
 </body>
 </html>

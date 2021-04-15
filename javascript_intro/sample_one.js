@@ -19,6 +19,7 @@ function print2(func, message) {
   console.log("in the print")
   func(message)
 }
+
 let f = (message) => {
   console.log("in the other function", message)
 }
