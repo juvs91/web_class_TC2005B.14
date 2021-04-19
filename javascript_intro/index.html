@@ -36,7 +36,16 @@
       document.querySelector("div.grand-pa").addEventListener("click", click_function)
       document.querySelector("div.parent").addEventListener("click", click_function)
       document.querySelector("div.child").addEventListener("click", click_function)
-      
+      let template_box = document.querySelector("template#my-box-template").content.children[0]
+      console.log(template_box)
+      let template_box_string = `
+            <div class="box">
+              <div class="box"></div>
+              <div class="box"></div>
+              <p>bla</p>
+            </div>
+        `
+        document.querySelector("div.boxes").insertAdjacentHTML('afterbegin', template_box_string)
     })
     
     // dom still not parsed
@@ -50,7 +59,10 @@
       string_dom_element_adder,
       template_dom_element_adder
     } from './events.js'
-
+    let event_function = add_item_to_list(string_dom_element_creator, string_dom_element_adder)
+    document.addEventListener("DOMContentLoaded", (_event) => {
+      document.querySelector(".add-epmloyee").addEventListener("click", event_function)
+    })
   </script>
 </head>
 <body>
@@ -60,6 +72,7 @@
       <div class="box"></div>
     </div>
   </template>
+  <div class="boxes"></div>
   <script>
     console.log("in the script from the body")
   </script>
@@ -84,7 +97,7 @@
   </ul>
   employee name: <input type="text" class="employe-name-input">
   measure price: <input type="text" class="kpi-measure-input">
-  <button class="add-item">add item</button>
+  <button class="add-epmloyee">add employee</button>
   <div class="total"></div>
   <div class="average"></div>
 </body>
