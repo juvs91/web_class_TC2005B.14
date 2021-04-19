@@ -36,13 +36,30 @@
       document.querySelector("div.grand-pa").addEventListener("click", click_function)
       document.querySelector("div.parent").addEventListener("click", click_function)
       document.querySelector("div.child").addEventListener("click", click_function)
+      
     })
     
     // dom still not parsed
     // document.querySelector("p#my-p-id").innerHTML = "hola mundo"
   </script>
+  <script type="module">
+    import {
+      add_item_to_list,
+      string_dom_element_creator,
+      template_dom_element_creator,
+      string_dom_element_adder,
+      template_dom_element_adder
+    } from './events.js'
+
+  </script>
 </head>
 <body>
+  <template id="my-box-template">
+    <div class="box">
+      <div class="box"></div>
+      <div class="box"></div>
+    </div>
+  </template>
   <script>
     console.log("in the script from the body")
   </script>
@@ -60,13 +77,15 @@
   pl write something<input type="text" class="key-event">
   <!--for next monday-->
   <template id="item-mock">
-    <li><span class="item-name">dona</span><span class="item-price">8</span></li> <button class="delete"> delete</button>
+    <li><span class="employe-name">Ali</span><span class="kpi-measure">8</span><button class="delete"> delete</button></li>
   </template>
+  <h3>employe-name by employee</h3>
   <ul class="item-list">
   </ul>
-  item name: <input type="text" class="new-item-name">
-  item price: <input type="text" class="new-item-price">
+  employee name: <input type="text" class="employe-name-input">
+  measure price: <input type="text" class="kpi-measure-input">
   <button class="add-item">add item</button>
   <div class="total"></div>
+  <div class="average"></div>
 </body>
 </html>
