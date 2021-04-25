@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script type="module">
+    import {
+      add_item_to_list,
+      string_dom_element_creator,
+      template_dom_element_creator,
+      string_dom_element_adder,
+      template_dom_element_adder
+    } from './events.js'
+    let event_function = add_item_to_list(string_dom_element_creator, string_dom_element_adder)
+    // document.addEventListener("DOMContentLoaded", (_event) => {
+    //   document.querySelector(".add-epmloyee").addEventListener("click", event_function)
+    // })
+    let ajax_promise = new Promise((resolve, reject) => {
+      let req = new XMLHttpRequest();
+      req.open('GET', 'https://pokeapi.co/api/v2/pokemon/ditto', true);
+      req.onreadystatechange = (req_event) => {
+          // debugger
+          if (req.readyState == 4) {
+            if(req.status == 200){
+              return resolve(req.response);
+            } else {
+              console.log(req.reject)
+              return reject(req.reject);
+            }
+          }
+        }
+        req.send(null);
+    });
+
+    ajax_promise.then((result) => {
+      // debugger
+      console.log("the result" + result);
+      return result
+    }).catch((err) => {
+      return err
+    })
+
+    let p = new Promise((resolve, reject) => {
+      setTimeout(() => {
+        console.log("en el timeout")
+        return resolve("yes")
+      }, 5000)
+    })
+
+    p.then(result => {
+      console.log("chain the then" + result)
+    })
+
+
+
+    console.log(ajax_promise)
+  </script>
+  <script>
+  </script>
+</head>
+<body>
+  
+</body>
+</html>

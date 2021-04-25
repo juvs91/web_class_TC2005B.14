@@ -36,7 +36,7 @@
       document.querySelector("div.grand-pa").addEventListener("click", click_function)
       document.querySelector("div.parent").addEventListener("click", click_function)
       document.querySelector("div.child").addEventListener("click", click_function)
-      let template_box = document.querySelector("template#my-box-template").content.children[0]
+      let template_box = document.querySelector("template#my-box-template").content.children[0].cloneNode(true)
       console.log(template_box)
       let template_box_string = `
             <div class="box">
@@ -45,7 +45,7 @@
               <p>bla</p>
             </div>
         `
-        document.querySelector("div.boxes").insertAdjacentHTML('afterbegin', template_box_string)
+        document.querySelector("div.boxes").insertAdjacentElement('afterbegin', template_box)
     })
     
     // dom still not parsed

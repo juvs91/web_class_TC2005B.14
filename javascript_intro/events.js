@@ -8,7 +8,7 @@ let add_item_to_list = (dom_element_creator, dom_element_adder) => {
 }
 
 let string_dom_element_creator = (employee_name, measure) => {
-  return `<li><span class="employe-name-input">${employee_name}</span><span class="kpi-measure">${measure}</span><button class="delete"> delete</button></li>`
+  return `<li><span class="employe-name">${employee_name}</span><span class="kpi-measure">${measure}</span><button class="delete"> delete</button></li>`
 }
 
 let template_dom_element_creator = (employee_name, measure) => {
