@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+  <script>
+    console.log(axios)
+    axios.put('http://localhost:8000/put/juve', {
+      "name": "juve",
+      "kpis": [{
+        "name": "bugs_per_week",
+        "func": "AVG",
+        "type": "scalar",
+        "range": ["start-date", "end-date"]
+      },{
+        "name": "jiras_solved_per_week",
+        "func": "AVG",
+        "type": "scalar"
+      }],
+      "position": "team lead"
+    })
+    .then((response) => {
+      console.log(response)
+    })
+    .catch(err => {
+      console.log(err)
+    })
+  </script>
+</head>
+<body>
+  
+</body>
+</html>
