@@ -20,7 +20,7 @@
         margin: 20px;
       }
   </style>
-  <script src="./sample_one.js"></script>
+  <!--
   <script>
     console.log("in the script from the head")
     document.addEventListener("DOMContentLoaded", (_event) => {
@@ -36,7 +36,7 @@
       document.querySelector("div.grand-pa").addEventListener("click", click_function)
       document.querySelector("div.parent").addEventListener("click", click_function)
       document.querySelector("div.child").addEventListener("click", click_function)
-      let template_box = document.querySelector("template#my-box-template").content.children[0].cloneNode(true)
+      let template_box = document.querySelector("template#my-box-template").content.children[0]
       console.log(template_box)
       let template_box_string = `
             <div class="box">
@@ -45,12 +45,13 @@
               <p>bla</p>
             </div>
         `
-        document.querySelector("div.boxes").insertAdjacentElement('afterbegin', template_box)
+        document.querySelector("div.boxes").insertAdjacentHTML('afterbegin', template_box_string)
     })
     
     // dom still not parsed
     // document.querySelector("p#my-p-id").innerHTML = "hola mundo"
   </script>
+  -->
   <script type="module">
     import {
       add_item_to_list,
@@ -63,9 +64,12 @@
     document.addEventListener("DOMContentLoaded", (_event) => {
       document.querySelector(".add-epmloyee").addEventListener("click", event_function)
     })
+
+
   </script>
 </head>
 <body>
+  <!--
   <template id="my-box-template">
     <div class="box">
       <div class="box"></div>
@@ -88,17 +92,25 @@
   <p id="my-p-id">hola id</p>
   <button id="my-btn"> holaa</button>
   pl write something<input type="text" class="key-event">
-  <!--for next monday-->
+ 
   <template id="item-mock">
     <li><span class="employe-name">Ali</span><span class="kpi-measure">8</span><button class="delete"> delete</button></li>
   </template>
+    -->
   <h3>employe-name by employee</h3>
   <ul class="item-list">
   </ul>
   employee name: <input type="text" class="employe-name-input">
   measure price: <input type="text" class="kpi-measure-input">
   <button class="add-epmloyee">add employee</button>
-  <div class="total"></div>
-  <div class="average"></div>
+  <div>
+    <h4>Total:</h4>
+    <p id="Total"> </p>
+  </div>
+  <div>
+  <h4>Average:</h4>
+  <p id="Average"> </p>
+  </div>  
+  <script src="./sample_one.js"></script>
 </body>
 </html>
