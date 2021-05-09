@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <div class="ratio ratio-16x9">
+    <div class="user">
+      <span class="name"><%- user.name%></span>
+      <span class="id"><%- user.id%></span>
+      <span class="role"><%- user.role%></span>
+    </div>
+    <ul class="employees-list">
+      <% employees.forEach((employee) => { %>
+        <li class="employee">
+          <span class="name"><%- employee.name%></span>
+          <span class="age"><%- employee.age%></span>
+        </li>
+      <%  })%>
+      <% for(var i = 0; i < employees.length; i++) {%>
+        <li class="employee">
+          <span class="name"><%- employees[i].name%></span>
+          <span class="age"><%- employees[i].age%></span>
+        </li>
+      <% } %>
+    </ul>
+    <!--TODO TO EVERYONE pls check how unity get the url vars-->
+    <iframe src="/game/index.html?user_id=<%-user.id%>" width="1480" height="700" title="Juego" allowfullscreen></iframe>
+  </div>
+</body>
+</html>
