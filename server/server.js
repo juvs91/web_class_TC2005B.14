@@ -23,7 +23,12 @@ let processParams = (req) => {
   return Object.assign({}, req.body, req.params, req.query)
 }
 
-let init_endpoints = (app, employeeController) => {
+let get_error_status = (error) => {
+  return error.status || 500
+}
+
+let init_endpoints = (app, employeeController, authMiddleWareFunction) => {
+  console.log(authMiddleWareFunction)
   app.get('/get/:id', (req, resp) => {
     console.log(req.query)
     resp.send({message: "message value"})
@@ -48,7 +53,7 @@ let init_endpoints = (app, employeeController) => {
     console.log(req.query)
     resp.send({message: "message value"})
   })
-  app.get('/game/:id', (_req, resp) => {
+  app.get('/game/:id',(_req, resp) => {
     resp.render('employee/game', {
       user: {
         id: 1,
@@ -63,6 +68,28 @@ let init_endpoints = (app, employeeController) => {
         age:25
       }]
     })
+  })
+  app.post('/login', (req, resp) => {
+    let params = processParams(req)
+    employeeController.login(params)
+    .then(token => {
+      resp.send({token})
+    })
+    .catch(err => {
+      resp.status(get_error_status(err)).send({ error: err.message })
+    })
+  })
+  app.post('/signup', async (req, resp) => {
+    let params = processParams(req)
+    try {
+      let tokenUser = await employeeController.signup(params)
+      resp.send(tokenUser) 
+    } catch (err) {
+      resp.status(get_error_status(err)).send({ error: err.message })
+    }
+  })
+  app.get('/auth_route', authMiddleWareFunction, (_req, resp, next)=> {
+    resp.send({success: "true"}) 
   })
 }
 

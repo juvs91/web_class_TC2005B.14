@@ -22,6 +22,15 @@ const EmployeeMysql = sequelize.define('Employee', {
     },
     birthdate: {
       type: Sequelize.DataTypes.DATE
+    },
+    email: {
+      type: Sequelize.DataTypes.STRING,
+      allowNull: false,
+      unique: 'email'
+    },
+    password: {
+      type: Sequelize.DataTypes.STRING,
+      allowNull: false
     }
   }, {
     // Other model options go here
